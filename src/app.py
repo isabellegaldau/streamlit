@@ -30,3 +30,6 @@ if st.button("Predict"):
     prediction = model.predict([[age, gender_value, height, weight, fcvc, ncp]])
     pred_class = class_dict[prediction[0]]
     st.write("Prediction:", pred_class)
+
+    # Display the numeric value corresponding to the selected option
+    st.write(f"FCVC selection: {fcvc} - {fcvc_options[fcvc]}")
