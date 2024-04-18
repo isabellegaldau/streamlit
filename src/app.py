@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 
 # Load the trained model
-with open("../models/random_forest_model.pkl", "rb") as file:
+with open("/workspaces/streamlit/models/random_forest_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 class_dict = {
