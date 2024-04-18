@@ -22,8 +22,8 @@ gender = st.selectbox("Gender", ["Male", "Female"], help="Select your gender.")
 height = st.slider("Height (cm)", min_value=0, max_value=250, value=170, step=1, help="Enter your height in centimeters.")
 weight = st.slider("Weight (kg)", min_value=0, max_value=300, value=70, step=1, help="Enter your weight in kilograms.")
 
-fcvc_options = {1: "1 - Rarely", 2: "2 - Sometimes", 3: "3 - Regularly"}
-fcvc = st.radio("Frequency of consumption of vegetables", options=list(fcvc_options.values()), index=1, help="Select how often you eat vegetables in your meals.")
+fcvc_options = {1: "Rarely", 2: "Sometimes", 3: "Regularly"}
+fcvc = st.radio("Frequency of consumption of vegetables", options=list(fcvc_options.keys()), index=1, format_func=lambda x: f"{x} - {fcvc_options[x]}", help="Select how often you eat vegetables in your meals.")
 
 ncp = st.slider("Number of main meals", min_value=1, max_value=4, value=3, step=1, help="Select the number of main meals you have daily.")
 
@@ -34,5 +34,5 @@ if st.button("Predict"):
     st.write("Prediction:", pred_class)
 
     # Display the numeric value corresponding to the selected option
-    #st.write(f"FCVC selection: {fcvc_options[int(fcvc[0])]}")
+    #st.write(f"FCVC selection: {fcvc} - {fcvc_options[fcvc]}")
 
