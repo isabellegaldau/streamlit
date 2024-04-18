@@ -34,5 +34,5 @@ if st.button("Predict"):
     st.write("Prediction:", pred_class)
 
     # Display the numeric value corresponding to the selected option
-    st.write(f"FCVC selection: {fcvc_options[int(fcvc[0])]}")
+    #st.write(f"FCVC selection: {fcvc_options[int(fcvc[0])]}")
 
